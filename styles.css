@@ -12,13 +12,14 @@
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  outline: none;
 }
 
 body,
 html {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  max-height: 100vh;
   overflow: auto;
 }
 
@@ -27,7 +28,7 @@ html {
 body {
   display: grid;
   grid-template-columns: [sidebar] minmax(280px, 1fr) [main] 4fr;
-  grid-template-rows: [header] 1fr [main] 5fr;
+  grid-template-rows: [header] 250px [main] 1fr;
 }
 
 .sidebar {
@@ -61,6 +62,63 @@ header {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 }
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.search-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.account-nook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.greetings {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 5%;
+  gap: 12px;
+}
+
+.greetings .admin-icon {
+  grid-area: 1 / 1 / -1 / 1;
+}
+
+.hi-there {
+  align-self: end;
+}
+
+.admin-name {
+  align-self: start;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;;
+}
+
 /* 2. Styles and Elements */
 
 .sidebar {
@@ -71,6 +129,26 @@ main  {
   background-color: var(--background-gray);
 }
 
+input {
+  height: 30px;
+  width: 100%;
+  border: 0;
+  background-color: var(--background-gray);
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+button {
+  border: 0;
+  color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: #1992d4;
+  font-size: 1rem;
+  padding: 5px;
+}
 /* 3. Images and Icons*/
 
 .sidebar-title img.sidebar-logo {
@@ -78,8 +156,29 @@ main  {
 }
 
 .sidebar img {
-  width: 30px;
+  width: 2rem;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(41deg) brightness(107%) contrast(101%);
+}
+
+.admin-icon {
+  border-radius: 50%;
+}
+
+.greetings .admin-icon {
+  width: 90px;
+}
+
+.bell + .admin-icon {
+  width: 55px;
+}
+
+.magnify {
+  width: 2rem;
+  margin: 5px;
+}
+
+.bell {
+  width: 2rem;
 }
 
 /* 4. Text Properties */
@@ -96,4 +195,25 @@ main  {
 .sidebar-line {
   font-weight: 600;
   font-size: 1.5rem;
+}
+
+input {
+  font-size: inherit;
+}
+
+.account-nook {
+  font-weight: 600;
+}
+
+.greetings .hi-there {
+  font-weight: 600;
+}
+
+.greetings .admin-name {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+button {
+  font-weight: 500;
 }
