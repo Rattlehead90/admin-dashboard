@@ -26,7 +26,7 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: [sidebar] minmax(200px, 1fr) [main] 4fr;
+  grid-template-columns: [sidebar] minmax(280px, 1fr) [main] 4fr;
   grid-template-rows: [header] 1fr [main] 5fr;
 }
 
@@ -57,6 +57,10 @@ img {
   gap: 20px;
 }
 
+header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
 /* 2. Styles and Elements */
 
 .sidebar {
