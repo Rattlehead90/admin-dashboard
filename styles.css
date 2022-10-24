@@ -1,0 +1,95 @@
+/* 0. Initial Declarations */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --sidebar-blue: #1992d4;
+  --background-gray: #e2e8f0;
+  --accent-orange: #f0b429;
+  --background-white: #f0b429;
+
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* 1. Layout Properties */
+
+body {
+  display: grid;
+  grid-template-columns: [sidebar] minmax(200px, 1fr) [main] 4fr;
+  grid-template-rows: [header] 1fr [main] 5fr;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / -1 / 1;
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  gap: 3rem;
+  padding: 25px 20px;
+}
+
+.sidebar-line {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+img {
+  place-self: center;
+}
+
+.sidebar-title,
+.sidebar-main,
+.sidebar-misc {
+  display: grid;
+  gap: 20px;
+}
+
+/* 2. Styles and Elements */
+
+.sidebar {
+  background-color: var(--sidebar-blue);
+}
+
+main  {
+  background-color: var(--background-gray);
+}
+
+/* 3. Images and Icons*/
+
+.sidebar-title img.sidebar-logo {
+  width: 50px;
+}
+
+.sidebar img {
+  width: 30px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(41deg) brightness(107%) contrast(101%);
+}
+
+/* 4. Text Properties */
+
+.sidebar {
+  color: white;
+}
+
+.sidebar-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.sidebar-line {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
