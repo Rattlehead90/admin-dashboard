@@ -238,6 +238,9 @@ hr {
   height: 1px;
 }
 
+header {
+  box-shadow: ;
+}
 /* 3. Images and Icons*/
 
 .sidebar-title img.sidebar-logo {
@@ -369,4 +372,24 @@ footer {
 
 .user-description {
   color: var(--text-gray);
+}
+
+/* 5. Media query */
+
+@media only screen and (min-width: 700px) {
+  .project-card {
+    width: 350px;
+  }
+
+  body {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .actualities {
+    width: 100%;
+  }
+  
+  .projects-layout {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
