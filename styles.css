@@ -154,7 +154,7 @@ main {
   background-color: white;
   border-radius: 9px;
   padding: 40px 30px;
-  gap: 30px;
+  gap: 15.7px;
   align-self: start;
   width: 100%;
 }
@@ -163,6 +163,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 310px;
 }
 
 .trending-line {
@@ -184,6 +185,7 @@ main {
   flex-direction: column;
   gap: 2px;
 }
+
 
 /* 2. Styles and Elements */
 
